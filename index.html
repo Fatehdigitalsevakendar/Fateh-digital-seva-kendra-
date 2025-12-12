@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fateh Digital Seva Kendra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-left">
+    <img src="csc-logo.png" alt="CSC Logo" class="logo">
+    <div class="brand">Fateh Digital Seva Kendra</div>
+  </div>
+
+  <div class="header-right">
+    <div class="small-note">Official Services • Ghal Kalan, Moga</div>
+  </div>
+</header>
+
+<main class="container" id="main">
+  <!-- top buttons -->
+  <div class="boxes" role="tablist" aria-label="Main boxes">
+    <button class="box-btn active" data-page="home" onclick="switchPage('home')">
+      <div class="box-icon">🏠</div>
+      <div class="box-title">Home</div>
+    </button>
+
+    <button class="box-btn" data-page="services" onclick="switchPage('services')">
+      <div class="box-icon">🧾</div>
+      <div class="box-title">Services</div>
+    </button>
+
+    <button class="box-btn" data-page="contact" onclick="switchPage('contact')">
+      <div class="box-icon">📞</div>
+      <div class="box-title">Contact</div>
+    </button>
+
+    <button class="box-btn" data-page="about" onclick="switchPage('about')">
+      <div class="box-icon">ℹ️</div>
+      <div class="box-title">About</div>
+    </button>
+  </div>
+
+  <!-- pages -->
+  <section id="home" class="page active">
+    <div class="card hero">
+      <h1>Fateh Digital Seva Kendra</h1>
+      <p class="muted">Ghal Kalan, Moga — Government services partner</p>
+
+      <div class="cta-row">
+        <a class="btn" href="#" onclick="switchPage('services');return false;">See Services</a>
+        <a class="btn outline" href="#" onclick="switchPage('contact');return false;">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="page">
+    <div class="card">
+      <h2>Our Services</h2>
+      <p class="muted">Tap a service to view price and message us on WhatsApp.</p>
+    </div>
+
+    <div id="servicesList" class="services-grid" aria-live="polite"></div>
+
+    <!-- service detail panel -->
+    <div id="serviceDetail" class="detail" aria-hidden="true">
+      <button class="detail-close" onclick="closeServiceDetail()" aria-label="Close">✕</button>
+      <h3 id="detailName"></h3>
+      <p id="detailDesc" class="muted"></p>
+      <p class="price" id="detailPrice"></p>
+      <div class="detail-actions">
+        <a id="detailWA" class="btn" target="_blank" rel="noopener">Message on WhatsApp</a>
+        <a id="detailCall" class="btn outline" href="#">Call</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="page">
+    <div class="card">
+      <h2>Contact</h2>
+      <p><strong>Phone / WhatsApp:</strong> <a id="phoneLink" href="tel:+919780010087">+91 9780010087</a></p>
+      <p><strong>Address:</strong> Ghal Kalan, Moga</p>
+      <p><a id="waLink" class="btn" href="https://wa.me/919780010087" target="_blank" rel="noopener">Message on WhatsApp</a></p>
+    </div>
+  </section>
+
+  <section id="about" class="page">
+    <div class="card">
+      <h2>About CSC / Seva Kendras</h2>
+      <p class="muted">
+        Common Service Centres (CSC) deliver government services to citizens — certificates, pension assistance,
+        Ayushman enrolment, EPFO help and more. Fateh Digital Seva Kendra is an authorized CSC partner under
+        Digital India to provide reliable, fast and friendly services for our community.
+      </p>
+    </div>
+    <div class="card small">
+      <h3>Official Note</h3>
+      <p class="muted">Please carry original IDs for verification. Fees shown are service charges; final approvals are done by the relevant government departments.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="foot-inner">© Fateh Digital Seva Kendra — Ghal Kalan, Moga</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
