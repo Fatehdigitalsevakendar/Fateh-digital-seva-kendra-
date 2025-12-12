@@ -1,0 +1,74 @@
+/* Professional & animated theme - mobile first */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#f3f8ff 0%,#fbfdff 100%);-webkit-font-smoothing:antialiased;color:#07122a}
+a{color:#0b6bf0;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:18px}
+
+/* Header */
+.site-header{
+  display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:linear-gradient(90deg,rgba(11,107,240,0.06),rgba(5,95,210,0.03));
+  border-bottom:1px solid rgba(2,6,23,0.03);position:sticky;top:0;z-index:60;backdrop-filter:blur(4px)
+}
+.header-left{display:flex;align-items:center;gap:14px}
+.logo{width:72px;height:72px;object-fit:contain;border-radius:12px;background:#fff;padding:6px;box-shadow:0 8px 22px rgba(2,6,23,0.06)}
+.brand{font-weight:900;font-size:20px;color:#07122a;letter-spacing:0.2px;text-shadow:0 1px 0 rgba(255,255,255,0.6);padding-left:6px;}
+
+/* small right note */
+.header-right .small-note{font-size:13px;color:#374151}
+
+/* Top boxes (grid) */
+.boxes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:18px 0 22px}
+.box-btn{
+  display:flex;align-items:center;gap:12px;padding:14px;border-radius:14px;border:0;cursor:pointer;background:linear-gradient(180deg,#0b6bf0,#0a53c3);
+  color:#fff;font-weight:800;box-shadow:0 8px 30px rgba(11,107,240,0.12);transition:transform .18s ease,box-shadow .18s ease;
+}
+.box-btn .box-icon{font-size:20px}
+.box-btn.active{transform:translateY(-6px);box-shadow:0 26px 70px rgba(11,107,240,0.18)}
+.box-btn:focus{outline:3px solid rgba(11,107,240,0.12)}
+
+/* Page / Card */
+.page{display:none}
+.page.active{display:block}
+.card{background:#fff;border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 14px 40px rgba(2,6,23,0.06)}
+.hero{padding:28px 22px;text-align:center;transition:transform .25s;transform-origin:center}
+.hero:hover{transform:translateY(-6px)}
+.hero h1{font-size:28px;margin:6px 0 10px}
+.muted{color:#55616b;line-height:1.6}
+
+/* CTA */
+.cta-row{display:flex;gap:12px;justify-content:center;margin-top:12px}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:#0b6bf0;color:#fff;font-weight:700;text-decoration:none;box-shadow:0 10px 30px rgba(11,107,240,0.12);transition:transform .12s}
+.btn:hover{transform:translateY(-3px)}
+.btn.outline{background:transparent;color:#0b6bf0;border:2px solid rgba(11,107,240,0.18)}
+
+/* Services grid */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:6px}
+.service{
+  background:linear-gradient(180deg,#fff,#fbfdff);
+  border-radius:12px;padding:12px;border:1px solid rgba(2,6,23,0.04);display:flex;justify-content:space-between;align-items:center;cursor:pointer;
+  transition:transform .14s ease,box-shadow .14s ease;
+}
+.service:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(2,6,23,0.08)}
+.service .title{font-weight:800;color:#07122a}
+.service .price{font-weight:900;color:#0b1630}
+
+/* Detail panel */
+.detail{position:fixed;right:18px;top:120px;width:340px;background:#fff;padding:16px;border-radius:12px;box-shadow:0 40px 160px rgba(2,6,23,0.18);display:none;z-index:999;transform-origin:top right}
+.detail[aria-hidden="false"]{display:block;animation:panelIn .18s ease both}
+@keyframes panelIn{from{transform:translateY(-10px) scale(.98);opacity:0}to{transform:none;opacity:1}}
+.detail-close{position:absolute;right:10px;top:10px;border:0;background:transparent;cursor:pointer;font-size:18px}
+
+/* responsive tweaks */
+@media (max-width:860px){
+  .boxes{grid-template-columns:repeat(2,1fr)}
+  .detail{left:12px;right:12px;top:auto;bottom:18px;width:auto}
+}
+@media (max-width:520px){
+  .boxes{grid-template-columns:repeat(1,1fr)}
+  .brand{font-size:18px}
+  .logo{width:60px;height:60px}
+  .hero h1{font-size:22px}
+}
+
+/* footer */
+.site-footer{padding:18px;text-align:center;color:#64707a;font-size:13px}
